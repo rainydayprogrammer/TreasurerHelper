@@ -78,7 +78,9 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\CashCalculator.xaml">
       <SubType>Designer</SubType>
