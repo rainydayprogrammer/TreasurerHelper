@@ -94,6 +94,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MaterialDesignColors">
+      <Version>1.1.3</Version>
+    </PackageReference>
     <PackageReference Include="MaterialDesignThemes">
       <Version>2.5.0.1205</Version>
     </PackageReference>
