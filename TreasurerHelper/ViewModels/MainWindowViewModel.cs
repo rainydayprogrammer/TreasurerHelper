@@ -1,4 +1,6 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
+using Prism.Regions;
 
 namespace TreasurerHelper.ViewModels
 {
@@ -11,9 +13,20 @@ namespace TreasurerHelper.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public MainWindowViewModel()
-        {
+        public DelegateCommand<string> NavigateCommand { get; private set; }
+        private IRegionManager _regionManager;
 
+        public MainWindowViewModel(IRegionManager regionManager)
+        {
+            _regionManager = regionManager;
+
+            NavigateCommand = new DelegateCommand<string>(Navigate);
+        }
+
+        private void Navigate(string navigatePath)
+        {
+            if (navigatePath != null)
+                _regionManager.RequestNavigate("MainContentRegion", navigatePath);
         }
     }
-}
+ }

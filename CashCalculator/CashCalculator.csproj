@@ -63,10 +63,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModels\CashCalculatorNavigationItemViewViewModel.cs" />
     <Compile Include="ViewModels\CashCalculatorViewModel.cs" />
     <Compile Include="ViewModels\ViewAViewModel.cs" />
     <Compile Include="Views\CashCalculator.xaml.cs">
       <DependentUpon>CashCalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashCalculatorNavigationItemView.xaml.cs">
+      <DependentUpon>CashCalculatorNavigationItemView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\CashCalculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CashCalculatorNavigationItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -22,6 +22,7 @@ namespace TreasurerHelper
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
+            moduleCatalog.AddModule<Home.HomeModule>();
             moduleCatalog.AddModule<CashCalculator.CashCalculatorModule>();
         }
     }
