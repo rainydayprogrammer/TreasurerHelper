@@ -63,7 +63,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\HomeNavigationItemViewModel.cs" />
     <Compile Include="Views\HomeNavigationItemView.xaml.cs">
       <DependentUpon>HomeNavigationItemView.xaml</DependentUpon>
     </Compile>

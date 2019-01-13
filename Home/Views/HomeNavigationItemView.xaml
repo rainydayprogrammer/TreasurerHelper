@@ -6,7 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Button x:Name="Home" ToolTip="メニュー切り替えテスト用" ToolTipService.InitialShowDelay="0" 
                         Style="{DynamicResource MaterialDesignFlatButton}"
-                        Click="Home_Click">
+                        Command="{Binding NavigateCommand}" CommandParameter="ViewA">
         <StackPanel Orientation="Horizontal">
             <materialDesign:PackIcon x:Name="PackIcon" Kind="Home" />
             <TextBlock Margin="6 0 0 0" Style="{StaticResource MaterialDesignBody1TextBlock}"

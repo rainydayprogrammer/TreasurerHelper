@@ -6,6 +6,8 @@ namespace TreasurerHelper.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
+        private readonly IRegionManager _regionManager;
+
         private string _title = "会計係支援システム";
         public string Title
         {
@@ -14,7 +16,6 @@ namespace TreasurerHelper.ViewModels
         }
 
         public DelegateCommand<string> NavigateCommand { get; private set; }
-        private IRegionManager _regionManager;
 
         public MainWindowViewModel(IRegionManager regionManager)
         {
@@ -26,7 +27,7 @@ namespace TreasurerHelper.ViewModels
         private void Navigate(string navigatePath)
         {
             if (navigatePath != null)
-                _regionManager.RequestNavigate("MainContentRegion", navigatePath);
+                _regionManager.RequestNavigate("ContentRegion", navigatePath);
         }
     }
  }

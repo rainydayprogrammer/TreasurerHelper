@@ -1,6 +1,4 @@
 ﻿using System.Windows.Controls;
-using Prism.Ioc;
-using Prism.Regions;
 
 namespace CashCalculator.Views
 {
@@ -9,22 +7,9 @@ namespace CashCalculator.Views
     /// </summary>
     public partial class CashCalculatorNavigationItemView : UserControl
     {
-        IContainerExtension _container;
-        IRegionManager _regionManager;
-
-        public CashCalculatorNavigationItemView(IContainerExtension container, IRegionManager regionManager)
+        public CashCalculatorNavigationItemView()
         {
             InitializeComponent();
-            _container = container;
-            _regionManager = regionManager;
-        }
-
-        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            var view = _container.Resolve<CashCalculator>();
-            IRegion region = _regionManager.Regions["ContentRegion"];
-            region.Add(view);
-            region.Activate(view);
         }
     }
 }

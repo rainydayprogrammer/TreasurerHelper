@@ -63,7 +63,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\CashCalculatorNavigationItemViewViewModel.cs" />
     <Compile Include="ViewModels\CashCalculatorViewModel.cs" />
     <Compile Include="ViewModels\ViewAViewModel.cs" />
     <Compile Include="Views\CashCalculator.xaml.cs">

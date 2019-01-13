@@ -6,7 +6,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Button x:Name="Root" ToolTip="紙幣・硬貨毎の枚数入力" ToolTipService.InitialShowDelay="0" 
                         Style="{DynamicResource MaterialDesignFlatButton}"
-                        Click="Button_Click" >
+                        Command="{Binding NavigateCommand}" CommandParameter="CashCalculator">
         <StackPanel Orientation="Horizontal">
             <materialDesign:PackIcon x:Name="PackIcon" Kind="Calculator" />
             <TextBlock Margin="6 0 0 0" Style="{StaticResource MaterialDesignBody1TextBlock}"
