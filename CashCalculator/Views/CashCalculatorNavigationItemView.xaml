@@ -4,7 +4,8 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
-    <Button x:Name="Root" ToolTip="紙幣・硬貨毎の枚数入力" ToolTipService.InitialShowDelay="0" 
+    <Button x:Name="Root" ToolTip="紙幣・硬貨毎の枚数入力" ToolTipService.InitialShowDelay="0"
+            HorizontalAlignment="Left"
                         Style="{DynamicResource MaterialDesignFlatButton}"
                         Command="{Binding NavigateCommand}" CommandParameter="CashCalculator">
         <StackPanel Orientation="Horizontal">

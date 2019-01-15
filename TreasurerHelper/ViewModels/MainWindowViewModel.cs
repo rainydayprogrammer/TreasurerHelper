@@ -9,10 +9,18 @@ namespace TreasurerHelper.ViewModels
         private readonly IRegionManager _regionManager;
 
         private string _title = "会計係支援システム";
+        private bool _mainMenuIsOpen = false;
+
         public string Title
         {
             get { return _title; }
             set { SetProperty(ref _title, value); }
+        }
+
+        public bool MainMenuIsOpen
+        {
+            get { return _mainMenuIsOpen; }
+            set { SetProperty(ref _mainMenuIsOpen, value); }
         }
 
         public DelegateCommand<string> NavigateCommand { get; private set; }
@@ -26,8 +34,11 @@ namespace TreasurerHelper.ViewModels
 
         private void Navigate(string navigatePath)
         {
+            MainMenuIsOpen = false;
+
             if (navigatePath != null)
                 _regionManager.RequestNavigate("ContentRegion", navigatePath);
+       
         }
     }
  }

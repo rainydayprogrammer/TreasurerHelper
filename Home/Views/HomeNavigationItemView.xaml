@@ -4,7 +4,8 @@
              xmlns:prism="http://prismlibrary.com/"             
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
-    <Button x:Name="Home" ToolTip="メニュー切り替えテスト用" ToolTipService.InitialShowDelay="0" 
+    <Button x:Name="Home" ToolTip="メニュー切り替えテスト用" ToolTipService.InitialShowDelay="0"
+            HorizontalAlignment="Left"
                         Style="{DynamicResource MaterialDesignFlatButton}"
                         Command="{Binding NavigateCommand}" CommandParameter="ViewA">
         <StackPanel Orientation="Horizontal">

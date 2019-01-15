@@ -12,23 +12,31 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
-    <DockPanel>
-        <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                                    Mode="PrimaryMid" DockPanel.Dock="Top">
-            <DockPanel>
-                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" Text="{Binding Title}"></TextBlock>
+    <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+        <materialDesign:DrawerHost.LeftDrawerContent>
+            <DockPanel MinWidth="212">
+                <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
+                                    DockPanel.Dock="Top"
+                                    HorizontalAlignment="Right" Margin="16"
+                                    IsChecked="{Binding MainMenuIsOpen}" />
+                <StackPanel Margin="0">
+                    <ItemsControl x:Name="NavigationItemsControl" prism:RegionManager.RegionName="MainNavigationRegion" Margin="0" Padding="0" />
+                </StackPanel>
             </DockPanel>
-        </materialDesign:ColorZone>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Border Grid.Column="0" Grid.Row="2" MinWidth="100" Margin="5,0,0,5">
-                <ItemsControl x:Name="NavigationItemsControl" prism:RegionManager.RegionName="MainNavigationRegion" Grid.Column="0" Margin="5" Padding="5" />
-            </Border>
-            <ContentControl prism:RegionManager.RegionName="ContentRegion" 
+        </materialDesign:DrawerHost.LeftDrawerContent>
+        <DockPanel>
+            <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                                    Mode="PrimaryMid" DockPanel.Dock="Top">
+                <DockPanel>
+                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="{Binding MainMenuIsOpen}"
+                                        x:Name="MenuToggleButton"/>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Text="{Binding Title}"></TextBlock>
+                </DockPanel>
+            </materialDesign:ColorZone>
+            <Grid>
+                <ContentControl prism:RegionManager.RegionName="ContentRegion" 
               Grid.Column="1" Grid.Row="2" Margin="5,8,5,5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-        </Grid>
-    </DockPanel>
+            </Grid>
+        </DockPanel>
+    </materialDesign:DrawerHost>
 </Window>
