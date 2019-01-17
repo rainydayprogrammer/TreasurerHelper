@@ -2,6 +2,7 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using System.Windows;
+using TreasurerHelper.Infrastructure;
 
 namespace TreasurerHelper
 {
@@ -17,7 +18,7 @@ namespace TreasurerHelper
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterSingleton<IMenuService, MenuService>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

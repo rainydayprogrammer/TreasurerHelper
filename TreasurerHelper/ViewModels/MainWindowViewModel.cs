@@ -1,12 +1,15 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
+using System.Collections.Generic;
+using TreasurerHelper.Infrastructure;
 
 namespace TreasurerHelper.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
         private readonly IRegionManager _regionManager;
+
 
         private string _title = "会計係支援システム";
         private bool _mainMenuIsOpen = false;
@@ -24,11 +27,14 @@ namespace TreasurerHelper.ViewModels
         }
 
         public DelegateCommand<string> NavigateCommand { get; private set; }
+        public List<MenuItem> MainMenuItems { get; set; }
 
-        public MainWindowViewModel(IRegionManager regionManager)
+
+        public MainWindowViewModel(IRegionManager regionManager, IMenuService menuService)
         {
             _regionManager = regionManager;
 
+            MainMenuItems = menuService.GetMainMenuItems();
             NavigateCommand = new DelegateCommand<string>(Navigate);
         }
 
@@ -37,7 +43,7 @@ namespace TreasurerHelper.ViewModels
             MainMenuIsOpen = false;
 
             if (navigatePath != null)
-                _regionManager.RequestNavigate("ContentRegion", navigatePath);
+                _regionManager.RequestNavigate(RegionNames.ContentRegion, navigatePath);
        
         }
     }

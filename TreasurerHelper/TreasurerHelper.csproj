@@ -114,6 +114,10 @@
       <Project>{625a069c-92df-4d96-bf9a-0abf20da3670}</Project>
       <Name>Home</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj">
+      <Project>{5172a799-a31c-48f3-a16d-928a50f57baf}</Project>
+      <Name>TreasurerHelper.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

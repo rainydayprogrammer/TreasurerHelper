@@ -63,9 +63,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Views\HomeNavigationItemView.xaml.cs">
-      <DependentUpon>HomeNavigationItemView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\ViewAViewModel.cs" />
     <Compile Include="Views\ViewA.xaml.cs">
       <DependentUpon>ViewA.xaml</DependentUpon>
@@ -89,14 +86,16 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\HomeNavigationItemView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\ViewA.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj">
+      <Project>{5172a799-a31c-48f3-a16d-928a50f57baf}</Project>
+      <Name>TreasurerHelper.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

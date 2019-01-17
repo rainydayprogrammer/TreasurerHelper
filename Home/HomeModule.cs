@@ -2,6 +2,7 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
+using TreasurerHelper.Infrastructure;
 
 namespace Home
 {
@@ -10,8 +11,10 @@ namespace Home
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(Views.ViewA));
-            regionManager.RegisterViewWithRegion("MainNavigationRegion", typeof(HomeItemView));
+            regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, typeof(Views.ViewA));
+
+            var menuService = containerProvider.Resolve<IMenuService>();
+            menuService.AddMainMenuItem(new MenuItem { Title = "ホーム", IconName = "Home", Description = "テスト用", NavigatePath = "Home.Views.ViewA" });
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

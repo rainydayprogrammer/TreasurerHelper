@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashCalculator", "CashCalcu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home", "Home\Home.csproj", "{625A069C-92DF-4D96-BF9A-0ABF20DA3670}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.Infrastructure", "TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj", "{5172A799-A31C-48F3-A16D-928A50F57BAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{625A069C-92DF-4D96-BF9A-0ABF20DA3670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{625A069C-92DF-4D96-BF9A-0ABF20DA3670}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{625A069C-92DF-4D96-BF9A-0ABF20DA3670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

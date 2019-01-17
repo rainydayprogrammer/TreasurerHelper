@@ -20,7 +20,21 @@
                                     HorizontalAlignment="Right" Margin="16"
                                     IsChecked="{Binding MainMenuIsOpen}" />
                 <StackPanel Margin="0">
-                    <ItemsControl x:Name="NavigationItemsControl" prism:RegionManager.RegionName="MainNavigationRegion" Margin="0" Padding="0" />
+                    <ItemsControl ItemsSource="{Binding MainMenuItems}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Button HorizontalAlignment="Left"
+                        Style="{DynamicResource MaterialDesignFlatButton}"
+                        Command="{Binding Path=DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" CommandParameter="{Binding NavigatePath}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon x:Name="PackIcon" Kind="{Binding IconName}" />
+                                        <TextBlock Margin="6 0 0 0" Style="{StaticResource MaterialDesignBody1TextBlock}"
+                                   Text="{Binding Title}" />
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
             </DockPanel>
         </materialDesign:DrawerHost.LeftDrawerContent>

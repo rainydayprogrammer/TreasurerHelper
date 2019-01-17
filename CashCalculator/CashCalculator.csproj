@@ -68,9 +68,6 @@
     <Compile Include="Views\CashCalculator.xaml.cs">
       <DependentUpon>CashCalculator.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CashCalculatorNavigationItemView.xaml.cs">
-      <DependentUpon>CashCalculatorNavigationItemView.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,16 +86,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CashCalculatorNavigationItemView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes">
       <Version>2.5.0.1205</Version>
     </PackageReference>
     <PackageReference Include="Prism.Wpf" Version="7.1.0.431&#xD;" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj">
+      <Project>{5172a799-a31c-48f3-a16d-928a50f57baf}</Project>
+      <Name>TreasurerHelper.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
