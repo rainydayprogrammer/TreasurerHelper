@@ -5,11 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TreasurerHelper.Infrastructure;
 
 namespace Home.ViewModels
 {
     public class ViewAViewModel : BindableBase
     {
+        public List<MenuItem> MainMenuItems { get; set; } 
         private string _message;
         public string Message
         {
@@ -17,8 +19,9 @@ namespace Home.ViewModels
             set { SetProperty(ref _message, value); }
         }
 
-        public ViewAViewModel()
+        public ViewAViewModel(IMenuService menuService)
         {
+            MainMenuItems = menuService.GetMainMenuItems();
             Message = "Home Module";
         }
     }
