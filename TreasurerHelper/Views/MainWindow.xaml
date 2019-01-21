@@ -43,8 +43,18 @@
                                     Mode="PrimaryMid" DockPanel.Dock="Top">
                 <DockPanel>
                     <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="{Binding MainMenuIsOpen}"
-                                        x:Name="MenuToggleButton"/>
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Text="{Binding Title}"></TextBlock>
+                                        x:Name="MenuToggleButton"
+                                  DockPanel.Dock="Left"/>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"
+                               Text="{Binding Title}"
+                               Margin="20 0 0 0"></TextBlock>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
+                        HorizontalAlignment="Right"
+                        ToolTip="Home" DockPanel.Dock="Right"
+                            Command="{Binding NavigateCommand}"
+                            CommandParameter="TreasurerHelper.Home.Views.HomeMenu">
+                        <materialDesign:PackIcon Kind="Home" Height="24" Width="24" />
+                    </Button>
                 </DockPanel>
             </materialDesign:ColorZone>
             <Grid>
