@@ -10,6 +10,9 @@ namespace TreasurerHelper.Infrastructure
     {
         List<MenuItem> GetMainMenuItems();
 
+        List<MenuItem> GetHomeMenuItems();
+
+
         void AddMainMenuItem(MenuItem menuItem);
     }
 }

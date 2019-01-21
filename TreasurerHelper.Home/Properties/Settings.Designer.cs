@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TreasurerHelper.CashCalculator.Properties {
+namespace TreasurerHelper.Home.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

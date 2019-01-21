@@ -7,8 +7,8 @@
     <ProjectGuid>{E3E6BEED-74CB-495A-B2AF-5B5784493620}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CashCalculator</RootNamespace>
-    <AssemblyName>CashCalculator</AssemblyName>
+    <RootNamespace>TreasurerHelper.CashCalculator</RootNamespace>
+    <AssemblyName>TreasurerHelper.CashCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -64,7 +64,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ViewModels\CashCalculatorViewModel.cs" />
-    <Compile Include="ViewModels\ViewAViewModel.cs" />
     <Compile Include="Views\CashCalculator.xaml.cs">
       <DependentUpon>CashCalculator.xaml</DependentUpon>
     </Compile>
@@ -98,6 +97,9 @@
       <Project>{5172a799-a31c-48f3-a16d-928a50f57baf}</Project>
       <Name>TreasurerHelper.Infrastructure</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CashCalculator.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

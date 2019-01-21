@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper", "TreasurerHelper\TreasurerHelper.csproj", "{ED72D232-9E98-4C01-86EA-5761DE982938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashCalculator", "CashCalculator\CashCalculator.csproj", "{E3E6BEED-74CB-495A-B2AF-5B5784493620}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home", "Home\Home.csproj", "{625A069C-92DF-4D96-BF9A-0ABF20DA3670}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.CashCalculator", "CashCalculator\TreasurerHelper.CashCalculator.csproj", "{E3E6BEED-74CB-495A-B2AF-5B5784493620}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.Infrastructure", "TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj", "{5172A799-A31C-48F3-A16D-928A50F57BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.Home", "TreasurerHelper.Home\TreasurerHelper.Home.csproj", "{48E43DFD-CE55-4F62-A484-375B71BD10CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.Cashbook", "TreasurerHelper.Cashbook\TreasurerHelper.Cashbook.csproj", "{D36C6491-A963-4BF3-9843-217FE34DC4BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +27,18 @@ Global
 		{E3E6BEED-74CB-495A-B2AF-5B5784493620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3E6BEED-74CB-495A-B2AF-5B5784493620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3E6BEED-74CB-495A-B2AF-5B5784493620}.Release|Any CPU.Build.0 = Release|Any CPU
-		{625A069C-92DF-4D96-BF9A-0ABF20DA3670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{625A069C-92DF-4D96-BF9A-0ABF20DA3670}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{625A069C-92DF-4D96-BF9A-0ABF20DA3670}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{625A069C-92DF-4D96-BF9A-0ABF20DA3670}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5172A799-A31C-48F3-A16D-928A50F57BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E43DFD-CE55-4F62-A484-375B71BD10CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E43DFD-CE55-4F62-A484-375B71BD10CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E43DFD-CE55-4F62-A484-375B71BD10CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E43DFD-CE55-4F62-A484-375B71BD10CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D36C6491-A963-4BF3-9843-217FE34DC4BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36C6491-A963-4BF3-9843-217FE34DC4BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36C6491-A963-4BF3-9843-217FE34DC4BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36C6491-A963-4BF3-9843-217FE34DC4BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

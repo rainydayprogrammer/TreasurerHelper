@@ -1,8 +1,8 @@
 ﻿using Prism.Mvvm;
 
-namespace TreasurerHelper.CashCalculator.ViewModels
+namespace TreasurerHelper.Cashbook.ViewModels
 {
-    public class CashCalculatorViewModel : BindableBase
+    public class CashbookViewModel : BindableBase
     {
         private string _message;
         public string Message
@@ -11,9 +11,9 @@ namespace TreasurerHelper.CashCalculator.ViewModels
             set { SetProperty(ref _message, value); }
         }
 
-        public CashCalculatorViewModel()
+        public CashbookViewModel()
         {
-            Message = "CashCalculator View from your Prism Module";
+            Message = "View A from Cashbook Module";
         }
     }
 }

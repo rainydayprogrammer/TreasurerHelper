@@ -25,6 +25,7 @@ namespace TreasurerHelper
         {
             moduleCatalog.AddModule<Home.HomeModule>();
             moduleCatalog.AddModule<CashCalculator.CashCalculatorModule>();
+            moduleCatalog.AddModule<Cashbook.CashbookModule>();
         }
     }
 }

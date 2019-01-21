@@ -135,13 +135,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CashCalculator\CashCalculator.csproj">
+    <ProjectReference Include="..\CashCalculator\TreasurerHelper.CashCalculator.csproj">
       <Project>{e3e6beed-74cb-495a-b2af-5b5784493620}</Project>
-      <Name>CashCalculator</Name>
+      <Name>TreasurerHelper.CashCalculator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Home\Home.csproj">
-      <Project>{625a069c-92df-4d96-bf9a-0abf20da3670}</Project>
-      <Name>Home</Name>
+    <ProjectReference Include="..\TreasurerHelper.Cashbook\TreasurerHelper.Cashbook.csproj">
+      <Project>{d36c6491-a963-4bf3-9843-217fe34dc4ba}</Project>
+      <Name>TreasurerHelper.Cashbook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreasurerHelper.Home\TreasurerHelper.Home.csproj">
+      <Project>{48e43dfd-ce55-4f62-a484-375b71bd10cb}</Project>
+      <Name>TreasurerHelper.Home</Name>
     </ProjectReference>
     <ProjectReference Include="..\TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj">
       <Project>{5172a799-a31c-48f3-a16d-928a50f57baf}</Project>
@@ -159,6 +163,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\CashBook.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
