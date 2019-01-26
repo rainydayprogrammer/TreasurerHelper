@@ -1,5 +1,6 @@
 ﻿using Prism.Mvvm;
 using Prism.Commands;
+using Prism.Interactivity.InteractionRequest;
 
 namespace TreasurerHelper.Cashbook.ViewModels
 {
@@ -29,7 +30,7 @@ namespace TreasurerHelper.Cashbook.ViewModels
             return string.IsNullOrEmpty(InputData);
         }
 
-
+        public InteractionRequest<INotification> FileOpenRequest { get; set; }
         public DelegateCommand FileOpenCommand { get; private set; } 
         public DelegateCommand FileSaveCommand { get; private set; }
         public DelegateCommand CsvImportCommand { get; private set; }
@@ -39,7 +40,9 @@ namespace TreasurerHelper.Cashbook.ViewModels
 
         public CashbookViewModel()
         {
+            FileOpenRequest = new InteractionRequest<INotification>();
             FileOpenCommand = new DelegateCommand(FileOpen, NoData).ObservesProperty(() => InputData);
+
             FileSaveCommand = new DelegateCommand(FileSave, HaveData).ObservesProperty(() => InputData);
             CsvImportCommand = new DelegateCommand(CsvImport, NoData).ObservesProperty(() => InputData);
             PrintPreviewCommand = new DelegateCommand(PrintPreview, HaveData).ObservesProperty(() => InputData);
@@ -48,7 +51,7 @@ namespace TreasurerHelper.Cashbook.ViewModels
 
         private void FileOpen()
         {
-            Message = "File Open Command";
+            FileOpenRequest.Raise(new Notification { Title = "Custom Popup", Content = "Custom Popup Message " }, r => Message = "File Open Command");
         }
 
         private void FileSave()
