@@ -7,10 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              xmlns:prism="http://prismlibrary.com/"
-             prism:ViewModelLocator.AutoWireViewModel="True" >
-    <Grid>
-        <TextBlock Text="{Binding Message}"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="True">
+                <Button ToolTip="ファイルを開く" Command="{Binding FileOpenCommand}">
+                    <materialDesign:PackIcon Kind="Folder" />
+                </Button>
+                <Button ToolTip="データを保存" Command="{Binding FileSaveCommand}">
+                    <materialDesign:PackIcon Kind="Floppy" />
+                </Button>
+                <Button ToolTip="CSVファイルをインポート" Command="{Binding CsvImportCommand}">
+                    <materialDesign:PackIcon Kind="FileDelimited" />
+                </Button>
+                <Separator />
+                <Button ToolTip="印刷プレビュー" Command="{Binding PrintPreviewCommand}">
+                    <materialDesign:PackIcon Kind="FileFind" />
+                </Button>
+                <Button ToolTip="印刷" Command="{Binding PrintCommand}">
+                    <materialDesign:PackIcon Kind="Printer" />
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <StackPanel>
+            <!--<CheckBox IsChecked="{Binding HaveData}" Content="データ有無" Margin="10"/>-->
+            <TextBox Text="{Binding InputData}" />
+            <TextBox />
+            <TextBlock Text="{Binding Message}"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center" />
-    </Grid>
+        </StackPanel>
+    </DockPanel>
 </UserControl>

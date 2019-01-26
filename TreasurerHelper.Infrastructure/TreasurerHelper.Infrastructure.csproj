@@ -45,8 +45,10 @@
     <Compile Include="IMenuService.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="MenuService.cs" />
+    <Compile Include="Models\CashBook.cs" />
     <Compile Include="RegionNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
