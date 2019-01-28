@@ -5,12 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TreasurerHelper.Infrastructure.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <StackPanel>
-            <TextBlock Text="{Binding Title}" FontSize="24" HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Content}" Margin="10" />
-            <Button Margin="25" Click="Button_Click">Accept</Button>
-        </StackPanel>
+             d:DesignHeight="300" d:DesignWidth="300"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             >
+    <Grid Background="Transparent">
+        <md:Card Margin="10">
+            <StackPanel Margin="16">
+                <TextBlock Text="{Binding Title}" FontSize="24" HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Content}" Margin="10" />
+                <Button Margin="25" Click="Button_Click">Accept</Button>
+            </StackPanel>
+        </md:Card>
     </Grid>
 </UserControl>
