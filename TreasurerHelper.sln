@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper", "TreasurerHelper\TreasurerHelper.csproj", "{ED72D232-9E98-4C01-86EA-5761DE982938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.CashCalculator", "CashCalculator\TreasurerHelper.CashCalculator.csproj", "{E3E6BEED-74CB-495A-B2AF-5B5784493620}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.CashCalculator", "TreasurerHelper.CashCalculator\TreasurerHelper.CashCalculator.csproj", "{E3E6BEED-74CB-495A-B2AF-5B5784493620}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreasurerHelper.Infrastructure", "TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj", "{5172A799-A31C-48F3-A16D-928A50F57BAF}"
 EndProject
