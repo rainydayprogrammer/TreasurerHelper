@@ -87,12 +87,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MaterialDesignThemes">
-      <Version>2.5.0.1205</Version>
-    </PackageReference>
-    <PackageReference Include="Prism.Wpf" Version="7.1.0.431&#xD;" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TreasurerHelper.Infrastructure\TreasurerHelper.Infrastructure.csproj">
       <Project>{5172a799-a31c-48f3-a16d-928a50f57baf}</Project>
       <Name>TreasurerHelper.Infrastructure</Name>
@@ -100,6 +94,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\CashCalculator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes">
+      <Version>2.5.0.1205</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf">
+      <Version>7.1.0.431</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

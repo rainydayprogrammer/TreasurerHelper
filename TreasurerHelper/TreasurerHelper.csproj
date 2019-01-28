@@ -135,13 +135,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CashCalculator\TreasurerHelper.CashCalculator.csproj">
-      <Project>{e3e6beed-74cb-495a-b2af-5b5784493620}</Project>
-      <Name>TreasurerHelper.CashCalculator</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TreasurerHelper.Cashbook\TreasurerHelper.Cashbook.csproj">
       <Project>{d36c6491-a963-4bf3-9843-217fe34dc4ba}</Project>
       <Name>TreasurerHelper.Cashbook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreasurerHelper.CashCalculator\TreasurerHelper.CashCalculator.csproj">
+      <Project>{e3e6beed-74cb-495a-b2af-5b5784493620}</Project>
+      <Name>TreasurerHelper.CashCalculator</Name>
     </ProjectReference>
     <ProjectReference Include="..\TreasurerHelper.Home\TreasurerHelper.Home.csproj">
       <Project>{48e43dfd-ce55-4f62-a484-375b71bd10cb}</Project>
