@@ -13,22 +13,11 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
                 <i:Interaction.Triggers>
                     <prism:InteractionRequestTrigger SourceObject="{Binding FileOpenRequest}">
-                        <prism:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True">
-                <prism:PopupWindowAction.WindowStyle>
-                    <Style TargetType="Window">
-                        <Setter Property="Background" Value="Transparent" />
-                        <Setter Property="WindowStyle" Value="None" />
-                        <Setter Property="ResizeMode" Value="NoResize" />
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="ShowInTaskbar" Value="False"/>
-                        <Setter Property="AllowsTransparency" Value="True"/>
-                        <Setter Property="SizeToContent" Value="WidthAndHeight" />
-                    </Style>
-                </prism:PopupWindowAction.WindowStyle>
-                <prism:PopupWindowAction.WindowContent>
+                        <cc:PopupChildWindowAction IsModal="True" CenterOverAssociatedObject="True">
+                            <prism:PopupWindowAction.WindowContent>
                                 <cc:CustomPopupView />
                             </prism:PopupWindowAction.WindowContent>
-                        </prism:PopupWindowAction>
+                        </cc:PopupChildWindowAction>
                     </prism:InteractionRequestTrigger>
                 </i:Interaction.Triggers>
         <DockPanel>
