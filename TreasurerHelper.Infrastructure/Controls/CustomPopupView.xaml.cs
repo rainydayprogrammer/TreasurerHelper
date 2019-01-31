@@ -24,22 +24,7 @@ namespace TreasurerHelper.Infrastructure.Controls
         public CustomPopupView()
         {
             InitializeComponent();
-            //Loaded += CustomPopupView_Loaded;
         }
-
-        //private void CustomPopupView_Loaded(object sender, RoutedEventArgs e)
-        //{
-        //    var parentWindow = this.Parent as Window;
-        //    if (parentWindow != null)
-        //    {
-        //        parentWindow.WindowStyle = WindowStyle.None;
-        //        parentWindow.ShowInTaskbar = false;
-        //        parentWindow.SizeToContent = SizeToContent.WidthAndHeight;
-        //        parentWindow.Background = Brushes.Transparent;
-        //        parentWindow.AllowsTransparency = true;
-        //        parentWindow.ResizeMode = ResizeMode.NoResize;
-        //    }
-        //}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
