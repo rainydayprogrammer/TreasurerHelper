@@ -41,12 +41,23 @@
                 </Button>
             </ToolBar>
         </ToolBarTray>
-        <StackPanel>
-            <TextBox Text="{Binding InputData}" />
-            <TextBox />
-            <TextBlock Text="{Binding Message}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center" />
-        </StackPanel>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBox Text="{Binding InputData}" />
+                <TextBox />
+                <TextBlock Text="{Binding Message}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="日付"></DataGridTextColumn>
+                        <DataGridTextColumn Header="科目"></DataGridTextColumn>
+                        <DataGridTextColumn Header="摘要"></DataGridTextColumn>
+                        <DataGridTextColumn Header="入金"></DataGridTextColumn>
+                        <DataGridTextColumn Header="出金"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
     </DockPanel>
 </UserControl>

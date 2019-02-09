@@ -11,7 +11,33 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Grid  ShowGridLines="True">
         <materialDesign:Card Padding="32" Margin="16">
-            <TextBlock Text="{Binding Message}" Style="{DynamicResource MaterialDesignTitleTextBlock}"></TextBlock>
+        <DataGrid ItemsSource="{Binding CountItems}" CanUserAddRows="False" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding MoneyType}" Header="金額" IsReadOnly="True">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Right" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding MoneyCount, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Header="個数／枚数"
+                                    EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Right" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>                    
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding AmountByType, Mode=OneWay}" IsReadOnly="True" Header="合計金額">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Right" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
         </materialDesign:Card>
     </Grid>
+        
 </UserControl>
