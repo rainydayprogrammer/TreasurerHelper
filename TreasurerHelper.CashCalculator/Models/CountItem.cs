@@ -36,7 +36,7 @@ namespace TreasurerHelper.CashCalculator.Models
             get { return _moneyCount; }
             set {
                 SetProperty(ref _moneyCount, value);
-                OnPropertyChanged("AmountByType");  // 他に書き方無いのか？
+                RaisePropertyChanged(nameof(AmountByType)); // この方がまだまし？
             }
         }
 
