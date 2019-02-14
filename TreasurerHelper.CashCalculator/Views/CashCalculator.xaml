@@ -49,7 +49,7 @@
         </DataGrid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10 20 10 20">
                     <TextBlock Text="合計：" Style="{StaticResource MaterialDesignTitleTextBlock}" />
-                    <TextBlock Text="{Binding GrandTotal, Mode=OneWay}" Width="140" TextAlignment="Right" Style="{StaticResource MaterialDesignTitleTextBlock}"></TextBlock>
+                    <TextBlock Text="{Binding GrandTotal, StringFormat={}{0:N0}, Mode=OneWay}" Width="140" TextAlignment="Right" Style="{StaticResource MaterialDesignTitleTextBlock}"></TextBlock>
                     <TextBlock Text="円" Style="{StaticResource MaterialDesignTitleTextBlock}" Margin="6 0 0 0" />
                 </StackPanel>
             </StackPanel>
@@ -64,7 +64,7 @@
         <GroupBox  Grid.Column="2" Grid.Row="0" Header="残高合計" Style="{DynamicResource MaterialDesignGroupBox}" Margin="12" materialDesign:ColorZoneAssist.Mode="Accent">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10 100 10 20">
                 <TextBlock Text="残高合計：" Style="{StaticResource MaterialDesignTitleTextBlock}" />
-                <TextBlock Text="{Binding Balance, Mode=OneWay}" Style="{StaticResource MaterialDesignTitleTextBlock}" Width="140" TextAlignment="Right"></TextBlock>
+                <TextBlock Text="{Binding Balance, StringFormat={}{0:N0}, Mode=OneWay}" Style="{StaticResource MaterialDesignTitleTextBlock}" Width="140" TextAlignment="Right"></TextBlock>
                 <TextBlock Text="円" Style="{StaticResource MaterialDesignTitleTextBlock}" Margin="6 0 0 0" />
             </StackPanel>
         </GroupBox>
